@@ -5,10 +5,8 @@ class Chapter2
       positions[trip] = (positions[trip - 2] + positions[trip - 1]) / 2.0
     end
 
-    trip = 0
-    positions.each do |position|
+    positions.each_with_index do |position, trip|
       puts "Trip: #{trip}, Position: #{position}" unless trip == 0
-      trip += 1
     end
   end
 end
